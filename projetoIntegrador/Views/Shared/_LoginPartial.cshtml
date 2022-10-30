@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/front/Home/index.html">Home</a></li>
+                    <li><a href="/front/Projeto/projeto.html">Projetos</a></li>
+                    <li><a href="/front/Sobre/about.html">Sobre</a></li>
+                    <li><a href="/front/Login/login.html">Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+    }
+</ul>

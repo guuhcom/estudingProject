@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="~/image/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>AgroX<br>Porque investir?</h1>
+                <p>
+                    Success isn't always about greatness. It's about consistency. Consistent
+                    <br>hard work gains sucess. Greatness will come.
+                </p>
+                <a href="/front/Sobre/about.html" class="btn">Saiba Mais &#8594;</a>
+            </div>
+            <div class="col-2" style="display: flex; justify-content: center;">
+                <img id="chick-img" src="~/image/chick.png" alt="chick.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----- Display Produtos ----->
+<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <img src="~/image/animal_image.jpg" alt="category-1.jpg">
+            </div>
+            <div class="col-3">
+                <img src="~/image/apple_image.jpg" alt="category-2.jpg">
+            </div>
+            <div class="col-3">
+                <img src="~/image/ervil_image.jpg" alt="category-3.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----- Porque investir no Agronegocio? ----->
+<div class="small-container">
+    <h2 class="title">Porque investir no Agronegocio?</h2>
+    <div class="row">
+        <div class="col-4">
+            <h4>Competitividade</h4>
+            <p>O Agronegócio brasileiro deixa de ser uma promessa e passa a assumir o protagonismo como a nação que alimenta o mundo.</p>
+        </div>
+        <div class="col-4">
+            <h4>Nova Geração</h4>
+            <p>Mudança estrutural no perfil dos empreendedores rurais que já são da 2ª ou 3ª geração mais adepta a novas tecnologias e modalidades de negócio.</p>
+        </div>
+        <div class="col-4">
+            <h4>Timing e Oportunidade</h4>
+            <p>A queda das taxas de juros somada a alta do dólar gera uma pressão para a migração de capital e investimentos rumo ao campo.</p>
+        </div>
+        <div class="col-4">
+            <h4>Potencial de Retorno</h4>
+            <p>O Agronegócio brasileiro deixa de ser uma promessa e passa a assumir o protagonismo como a nação que alimenta o mundo.</p>
+        </div>
+        <div class="col-4">
+            <h4>Segurança</h4>
+            <p>Mudança estrutural no perfil dos empreendedores rurais que já são da 2ª ou 3ª geração mais adepta a novas tecnologias e modalidades de negócio.</p>
+        </div>
+        <div class="col-4">
+            <h4>Diversificação</h4>
+            <p>A queda das taxas de juros somada a alta do dólar gera uma pressão para a migração de capital e investimentos rumo ao campo.</p>
+        </div>
+    </div>
+</div>
+
+<!----- Feedback ----->
+<div class="feedback">
+
+    <div class="small-container">
+
+        <h2 class="title">O que os clientes dizem sobre nós...</h2>
+        <div class="row2">
+            <div class="col-4">
+                <h4 style="color: #100805;"><b>Gustavo Guimarões.</b></h4>
+                <p style="color: #100805;"><b>"Eu me apaixonei pela plataforma no momento que a vi!"</b></p>
+            </div>
+            <div class="col-4">
+                <h4 style="color: #100805;"><b>Gustavo Guimarões.</b></h4>
+                <p style="color: #100805;"><b>"Eu me apaixonei pela plataforma no momento que a vi!"</b></p>
+            </div>
+            <div class="col-4">
+                <h4 style="color: #100805;"><b>Gustavo Guimarões.</b></h4>
+                <p style="color: #100805;"><b>"Eu me apaixonei pela plataforma no momento que a vi!"</b></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!------ Footer ----->
+<footer class="row3">
+    <div class="footer-content" style=color:white;>
+        <p>
+            Copyright &copy; 2021, Todos os direitos reservados - Newton Paiva - Desenvolvedores.
+        </p>
+        <div class="social-list ">
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=5531993035307&text=Olá,%20tudo%20bem%20?. "><i class="fab fa-whatsapp "></i></a></li>
+                <li><a href="https://www.instagram.com/ "><i class="fab fa-instagram "></i></a></li>
+                <li><a href="https://www.linkedin.com/ "><i class="fab fa-linkedin "></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

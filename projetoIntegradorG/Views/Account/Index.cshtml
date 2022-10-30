@@ -1,0 +1,89 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="container-fluid justify-content-md-center align-self-center col-xl-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 h-100" style="margin-top:15%;">
+    <div class="text-truncate text-center">
+        <img src="~/image/imagem-do-usuario-com-fundo-preto (2).png" />
+        <h5>Login</h5>
+    </div>
+
+    @if (TempData["LoginUsuarioFalhou"] != null)
+    {
+        <p class="alert alert-danger">@TempData["LoginUsuarioFalhou"]</p>
+    }
+
+    @using (Html.BeginForm("Logar", "Account", FormMethod.Post, new { @class = "form-horizontal text-center", role = "form" }))
+    {
+        <div class="text-truncate" style="margin:0px;">
+            <div class="input-group mb-3 text-truncate" style="margin-top:15px;">
+                <span for="Login" class="input-group-text col-xl-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <img src="~/icon/user_16px.png" style="width:auto; height:20px;" />
+                    &nbsp;Matricula
+                </span>
+                @Html.TextBoxFor(
+                    u => u.Login,
+                    new
+                         {
+                        @class = "form-control",
+                        name = "Login",
+                        id = "Login",
+                        placeholder = "Digite sua matricula"
+                    }
+                )
+            </div>
+            <span asp-validation-for="Login" class="text-danger" style="margin-top:-5px;"></span>
+        </div>
+
+
+        <div class="text-truncate" style="margin:0px;">
+            <div class="input-group mb-3 text-truncate" style="margin-top:15px;">
+                <span for="SENHA_USU" class="input-group-text col-xl-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <img src="~/icon/password_26px.png" style="width:auto; height:15px;">
+                    &nbsp;&nbsp;Senha
+                </span>
+                @Html.TextBoxFor(
+                    u => u.Password,
+                    new
+                         {
+                        @class = "form-control",
+                        name = "Password",
+                        id = "Password",
+                        placeholder = "Digite sua senha",
+                        type = "password"
+                    }
+                )
+            </div>
+            <span asp-validation-for="Password" class="text-danger" style="margin-top:-5px;"></span>
+        </div>
+
+        <div class="text-truncate" style="margin:0px;">
+            <div class="input-group mb-3 text-truncate" style="margin-top:15px;">
+                <span for="CARTEIRA" class="input-group-text col-xl-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <img src="~/icon/Card_24px.png" style="width:auto; height:15px;">
+                    &nbsp;&nbsp;Carteira
+                </span>
+                <select id="CARTEIRA" name="IdCarteira" class="custom-select">
+                    <option value="0">--</option>
+                    @foreach (var card in ViewBag.ListCards)
+                    {
+                        <option value="@Html.Encode(card.IDCART_CART)">@card.NOMCART_CART</option>
+                    }
+                </select>
+            </div>
+            <span asp-validation-for="IdCarteira" class="text-danger" style="margin-top:-5px;"></span>
+        </div>
+
+        <div class="form-group " style="margin-top:10px;">
+            <div class="text-center">
+                <input type="submit" value="Login" class="btn btn-primary col-4" />
+            </div>
+        </div>
+    }
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

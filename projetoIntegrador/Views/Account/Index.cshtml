@@ -1,0 +1,61 @@
+﻿@model AccountViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="~/image/plant.png" alt="logo.png" width="125px"/>
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!----- Login ----->
+<div class="section-login">
+    <div class="left">
+        <img src="~/image/background.jpg" width="400px" height="543px" style="background-size: cover;"/>
+    </div>
+
+    @if (TempData["LoginUsuarioFalhou"] != null)
+    {
+        <p class="alert alert-danger">@TempData["LoginUsuarioFalhou"]</p>
+    }
+
+    @using (Html.BeginForm("Logar", "Account", FormMethod.Post, new { role = "from" }))
+    {
+        <h4>Nós somos <span>AgroX</span></h4>
+        <p>Bem vindo de volta!<br>Acesse sua conta para novos investimentos:</p>
+        <div class="floating-label">
+            @Html.TextBoxFor(u => u.Email, new { placeholder = "Email", autocomplete = "off" })
+            @Html.LabelFor(u => u.Email, "Email:")
+        </div>
+        <div class="floating-label">
+            @Html.TextBoxFor(u => u.Password, new { placeholder = "Password", autocomplete = "off" })
+            @Html.LabelFor(u => u.Password)
+        </div>
+        <input id="button" type="submit" value="Login" />
+        <a href="/front/Login/forgot.html" class="discrete" target="_blank">Esqueceu a senha?</a>
+        <a href="/front/Register/register.html" class="register" target="_blank">Não possui uma conta?</a>
+    }
+
+
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

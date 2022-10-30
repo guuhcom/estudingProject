@@ -1,0 +1,68 @@
+﻿
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- --- Contato ----->
+<div class="contact">
+    <div class="small-container">
+        <div class="row3">
+            <div class="col-5">
+                <img src="~/image/box.png" alt="img.png">
+            </div>
+            <div class="formulario">
+                <form action="/action_page.php">
+                    <label for="fname">Nome Completo</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Nome Completo..">
+
+                    <label for="lname">Email</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Email..">
+
+                    <label for="country">País</label>
+                    <select id="country" name="country">
+                        <option value="australia">Brasil</option>
+                        <option value="canada">USA</option>
+                        <option value="usa">Australia</option>
+                    </select>
+
+                    <label for="subject">Assunto</label>
+                    <textarea id="subject" name="subject" placeholder="Escreva algo.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------ Footer ----->
+<footer class="row3">
+    <div class="footer-content" style=color:white;>
+        <p>
+            Copyright &copy; 2021, Todos os direitos reservados - Newton Paiva - Desenvolvedores.
+        </p>
+        <div class="social-list ">
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=5531993035307&text=Olá,%20tudo%20bem%20?. "><i class="fab fa-whatsapp "></i></a></li>
+                <li><a href="https://www.instagram.com/ "><i class="fab fa-instagram "></i></a></li>
+                <li><a href="https://www.linkedin.com/ "><i class="fab fa-linkedin "></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

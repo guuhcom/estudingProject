@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Projetos";
+}
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<!----- Projeto ----->
+<div class="session-projeto">
+    <!----- Menu Projeto ----->
+    <div class="menu">
+        <ul>
+            <input type="text" placeholder="Pesquisar.." style="width: 100%; height: 26px;">
+            <li>
+                <a href="#">Projeto</a>
+                <ul>
+                    <li>@Html.ActionLink("Criar Projeto", "Criar", "Projeto")</li>
+                    <li>@Html.ActionLink("Acompanhar Projetos", "Acompanhar", "Projeto")</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Investimentos</a>
+                <ul>
+                    <li><a href="#">Investimentos em Andamento</a></li>
+                    <li><a href="#">Investimentos Encerrados</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        startList = function () {
+            if (document.all && document.getElementById) {
+                navRoot = document.getElementById("menuDropDown");
+                for (i = 0; i < navRoot.childNodes.length; i++) {
+                    node = navRoot.childNodes[i];
+                    if (node.nodeName == "LI") {
+                        node.onmouseover = function () {
+                            this.className += " over";
+                        }
+                        node.onmouseout = function () {
+                            this.className = this.className.replace(" over", "");
+                        }
+                    }
+                }
+            }
+        }
+        window.onload = startList;
+    </script>
+    <!----- Menu Fim ----->
+    <!----- Projeto ----->
+
+    <div class="row">
+        <h2 style="text-align:center">Investimentos Disponiveis:</h2>
+        <hr>
+
+        <div class="card">
+            <img src="~/image/apiary.jpg" alt="apiary.png" style="width:100%">
+            <h1>Apiário XXX</h1>
+            <p>Apiário é um conjunto de colmeias utilizadas para criação de abelhas, normalmente para a colheita de mel ou a polinização de culturas agrícolas.</p>
+            <button type="submit" onclick="javascript:window.location.href='/Projeto/Acompanhar'; return false;">Ver mais</button>
+        </div>
+
+    </div>
+</div>
+
+<!----- Footer ----->
+<footer class="row3">
+    <div class="footer-content" style=color:white;>
+        <p>
+            Copyright &copy; 2021, Todos os direitos reservados - Newton Paiva - Desenvolvedores.
+        </p>
+        <div class="social-list ">
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=5531993035307&text=Olá,%20tudo%20bem%20?. "><i class="fab fa-whatsapp "></i></a></li>
+                <li><a href="https://www.instagram.com/ "><i class="fab fa-instagram "></i></a></li>
+                <li><a href="https://www.linkedin.com/ "><i class="fab fa-linkedin "></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

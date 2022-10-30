@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Acompanhar Projetos";
+}
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Sobre")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!----- Projeto Projeto ----->
+<div class="session-aco">
+    <div class="left">
+        <img src="~/image/apiary.jpg" width="480px" height="600px"/>
+    </div>
+    <form action="" class="cardProjeto">
+        <h4>Apiário<span>XXX</span></h4>
+        <hr>
+        <p>Responsável: Gustavo Guimarões</p>
+        <p>Apiário é um conjunto de colmeias utilizadas para criação de abelhas, normalmente para a colheita de mel ou a polinização de culturas agrícolas.</p>
+        <hr>
+        <label for="file">Total Arrecadado: (R$ 320,00 / R$ 1000,00)</label>
+        <progress id="progess" value="320" max="1000"> 32% </progress>
+        <hr>
+        <button type="submit" onclick="javascript:window.location.href='/Projeto/Associar'; return false;">Associar-se</button>
+    </form>
+</div>

@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Criar Projetos";
+}
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Index", "Projeto")</li>
+                    <li>@Html.ActionLink("Sobre", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Contato", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Conta", "Index", "Account")</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!----- Create Projeto ----->
+
+<div class="card-criar">
+    <form action="action_page.php">
+        <div class="container">
+            <h1>Projeto</h1>
+            <p>Preencha os dados para a criação do seu projeto.</p>
+            <hr>
+
+            <label for="name"><b>Nome</b></label>
+            <input type="text" placeholder="Nome" name="name" id="name" required>
+
+            <label for="desc">Descrição</label>
+            <hr>
+            <textarea id="desc" name="desc" placeholder="Descreva seu projeto..." style="height:200px; width: 600px;"></textarea>
+            <hr>
+
+            <label for="value"><b>Valor</b></label>
+            <input type="text" placeholder="R$" name="value" id="value" required>
+            <hr>
+
+            <label for="value-prop"><b>Proposta de Valor</b></label>
+            <input type="text" placeholder="Proposta de Valor" name="value-prop" id="value-prop" required>
+            <hr>
+
+            <label for="phone"><b>Telefone</b></label>
+            <input type="text" placeholder="Telefone" name="phone" id="phone" required>
+            <hr>
+
+            <label for="CPF/CNPJ"><b>CPF/CNPJ</b></label>
+            <input type="text" placeholder="CPF/CNPJ" name="CPF/CNPJ" id="CPF/CNPJ" required>
+            <hr>
+
+            <div class="file">
+                <label for="doc"><b>Documentação do Projeto</b></label>
+                <input type="file" id="doc" name="doc">
+                <hr>
+            </div>
+
+            <p>Ao criar uma conta está a concordar com os nossos<a style="color:dodgerblue;" href="#"> Termos e Privacidade</a>.</p>
+            <button type="submit" class="registerbtn">Registrar</button>
+        </div>
+    </form>
+</div>
+
+<!----   Footer  ---->>
+<footer class="row3">
+    <div class="footer-content" style=color:white;>
+        <p>
+            Copyright &copy; 2021, Todos os direitos reservados - Newton Paiva - Desenvolvedores.
+        </p>
+        <div class="social-list ">
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=5531993035307&text=Olá,%20tudo%20bem%20?. "><i class="fab fa-whatsapp "></i></a></li>
+                <li><a href="https://www.instagram.com/ "><i class="fab fa-instagram "></i></a></li>
+                <li><a href="https://www.linkedin.com/ "><i class="fab fa-linkedin "></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
